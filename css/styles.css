@@ -190,3 +190,59 @@ main section {
     margin-bottom: 30px;
 }
 
+table {
+    width: 100%;
+    border: 2px solid var(--green);
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: var(--light-yellow);
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid var(--green);
+    text-align: left;
+    vertical-align: top;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--light-blue);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--light-yellow);
+}
+
+thead {
+    background-color: #155724;
+    color: var(--white);
+    text-transform: uppercase;
+    border-bottom: 4px solid var(--yellow);
+}
+
+thead th {
+    color: var(--white);
+    font-family: var(--heading-font);
+    font-weight: bold;
+}
+
+caption {
+    font-family: var(--body-font);
+    color: var(--green);
+    padding: 10px;
+    font-weight: bold;
+}
+
+code, pre, kbd, samp {
+    font-family: var(--code-font);
+    color: #155724;
+}
+
+td code {
+    font-family: var(--code-font);
+    background-color: var(--light-green);
+    color: #155724;
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+
