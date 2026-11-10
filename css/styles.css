@@ -1,0 +1,148 @@
+
+/*
+Name: PLACEHOLDER
+Lesson: Lesson 8
+Course: PLACEHOLDER
+*/
+
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Fredoka:wght@400;600&family=Fira+Code&display=swap');
+
+/* Color Scheme */
+:root {
+    --sky-blue: #87CEEB;
+    --light-blue: #B3E5FC;
+    --green: #15652D;
+    --light-green: #B9E4A5;
+    --yellow: #FFF176;
+    --light-yellow: #FFF9C4;
+    --white: #FFFFFF;
+
+    --background-color: var(--sky-blue);
+    --text-color: var(--green);
+    --nav-color: var(--yellow);
+    --border-color: var(--green);
+
+    --body-font: 'Comic Neue', cursive;
+    --heading-font: 'Fredoka', sans-serif;
+    --code-font: 'Fira Code', monospace;
+}
+
+/* Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-size: 18px;
+
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 230px minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "nav header"
+        "nav main";
+}
+
+/* Heading Fonts */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--green);
+}
+
+/* Code Fonts */
+code, pre, kbd, samp {
+    font-family: var(--code-font);
+}
+
+/* Navigation Section */
+.site-navigation {
+    grid-area: nav;
+
+    background: linear-gradient(
+        180deg,
+        var(--yellow),
+        var(--light-green),
+        var(--sky-blue)
+    );
+
+    color: var(--green);
+    min-width: 230px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Navigation Menu */
+.site-navigation nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Navigation Links */
+.site-navigation a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 20px;
+
+    background: linear-gradient(
+        90deg,
+        var(--light-yellow),
+        var(--yellow)
+    );
+
+    color: var(--green);
+    font-family: var(--body-font);
+    font-weight: bold;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Navigation Icons */
+.site-navigation .material-icons {
+    font-size: 24px;
+    color: inherit;
+}
+
+/* Navigation Hover Effects */
+.site-navigation a:hover {
+    background: linear-gradient(
+        90deg,
+        var(--light-green),
+        var(--light-blue),
+        var(--light-yellow)
+    );
+
+    color: #0B4F20;
+}
+
+/* Header Layout */
+header {
+    grid-area: header;
+    padding: 20px 30px;
+}
+
+/* Main Layout */
+main {
+    grid-area: main;
+    padding: 20px 30px;
+    min-width: 0;
+}
+
